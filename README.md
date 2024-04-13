@@ -1,55 +1,83 @@
+# README - Program Usage Instructions
 
-# Health and Fitness Club Management System - Project Report
+## IMPORTANT
 
-## Table of Contents
-- [Introduction](#introduction)
-- [Conceptual Design](#conceptual-design)
-- [Relational Schemas](#relational-schemas)
-- [Data Definition Language (DDL)](#data-definition-language-ddl)
-- [Data Manipulation Language (DML)](#data-manipulation-language-dml)
-- [Implementation](#implementation)
-- [Bonus Features (Optional)](#bonus-features-optional)
-- [GitHub Repository](#github-repository)
-- [Conclusion](#conclusion)
+### INSTRUCTIONS TO RUN THE PROGRAM
+1. Download the code and the necessary SQL files to test.
+2. Install `psycopg2` and `tabulate`:
+    ```bash
+    pip3 install psycopg2-binary
+    pip3 install tabulate
+    ```
+3. **ENSURE MODULES ARE INSTALLED IN THE SAME VERSION AS THE PYTHON PROGRAM YOU ARE USING** (If using Python 3, use `pip3`).
+4. Update the database information to match with your database settings.
+5. Run the program using:
+    - **FOR MAC/Linux**: `python3 main.py`
+    - **FOR Windows**: `python main.py`
+6. You can use the example information given in this README to log in or make any changes.
 
-## Introduction
-Briefly introduce the purpose of this report, the scope of the project, and the main functionalities of the Health and Fitness Club Management System.
+### FLOW OF THE PROGRAM
+The application is a Command Line Interface made in Python.
 
-## Conceptual Design
-### ER Diagrams
-- Insert the ER diagrams created by the team member responsible.
-- Describe each entity and relationship.
-- Discuss the assumptions made regarding cardinalities and participation types.
-  
-### Assumptions
-- List any assumptions made during the design phase.
+#### LOGIN/REGISTER INTERFACE
+Upon starting the program, the user is prompted to either login or register as a member, trainer, or administrator.
 
-## Relational Schemas
-### Reduction to Relation Schemas
-- Provide the relational schema diagrams and explain how the ER components were mapped to tables.
-- Mention who was responsible for this part of the project.
+**If logging in:**
+- Members input their email and password.
+    - Example member login to test: 
+        - email: `sahith.nulu@email.com`
+        - password: `password3`
+- Trainers input their trainer ID.
+    - Example trainer login to test: 
+        - trainerID: `1`
+- Administrators input their staff ID.
+    - Example admin login to test: 
+        - StaffID: `1`
 
-## Data Definition Language (DDL)
-### File Overview
-- Explain what is included in the DDL file (e.g., table creation, constraints).
-- This section is managed by the team member assigned to DDL.
-- Provide a link to the GitHub location where the DDL file can be accessed.
+**If registering:**
+- Users provide necessary details like name, email, password, fitness goals, and health metrics.
+    - Example information: 
+        - Name: `saad`
+        - Email: `saad@email.com`
+        - Password: `passwordsaad`
+        - Fitness goals: `gain muscle`
+        - Health metrics: `25`
 
-## Data Manipulation Language (DML)
-### Sample Data Insertion
-- Discuss the DML file and the sample data it includes for each table.
-- This section is managed by the team member assigned to DML.
-- Provide a link to the GitHub location where the DML file can be accessed.
+### MEMBER INTERFACE
+After successful login or registration, members are presented with a dashboard where they can:
+1. Update profile information.
+2. View profile information.
+3. Manage schedules:
+    - **NOTE:** While entering information for date, write it in the form `YYYY-MM-DD` (E.g., `2024-01-01`).
+    - **NOTE:** While entering information for time, write it in the form `HH:MM` (E.g., `19:00`).
+    - Schedule personal training sessions.
+    - Schedule group fitness classes.
+    - Reschedule or cancel sessions.
+4. View upcoming schedules.
+5. **BONUS:** Members can view recommended classes based on availability.
 
-## Implementation
-### Application Overview
-- Describe the architecture of your application (CLI, web, or desktop application).
-- Explain the main components and their interactions.
-- This section is managed by the team member responsible for implementation.
-- Include snippets or pseudocode where relevant.
+### TRAINER INTERFACE
+Trainers have access to functionalities to:
+1. Update availability.
+    - **NOTE:** While entering information for availability, write it in the form `HH:MM - HH:MM` (E.g., `10:00 - 15:00`).
+2. View member profiles.
+    - Search for a member based on the name.
+3. View trainer schedules.
 
-## Bonus Features
-- Discuss any additional features that were implemented to enhance the system.
-- Explain the innovative aspects and the effort involved.
-
-
+### ADMIN INTERFACE
+Administrators can:
+1. Manage room bookings:
+    - Update room information.
+    - Update room for fitness classes.
+    - Delete reservations for fitness classes.
+2. View room bookings.
+3. View room information.
+4. Update equipment status.
+5. Monitor equipment status.
+6. Manage group fitness class schedules:
+    - Add, update, or cancel group fitness classes.
+    - Update training sessions.
+    - Cancel training sessions.
+7. View all classes.
+8. Handle billing:
+    - Update payment status for members.
