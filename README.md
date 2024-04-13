@@ -1,6 +1,6 @@
 # README - Program Usage Instructions
 
-## READ THIS TO UNDERSTAND HOW TO USE THE PROGRAM
+## IMPORTANT
 
 ### INSTRUCTIONS TO RUN THE PROGRAM
 1. Download the code and the necessary SQL files to test.
