@@ -540,7 +540,7 @@ def register():
     email = input("Enter email: ")
     password = input("Enter password: ")
     goals = input("Enter fitness goals: ")
-    healthMetrics = input("Enter health metrics: ")
+    healthMetrics = input("Enter health metrics (BMI): ")
     connection = connect()
     cursor = connection.cursor()
     cursor.execute("INSERT INTO Member (Name, Email, Password, FitnessGoal, HealthMetrics, PaymentStatus) VALUES (%s, %s, %s, %s, %s, 'Pending');", (name, email, password, goals, healthMetrics))
