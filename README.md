@@ -48,16 +48,8 @@ Briefly introduce the purpose of this report, the scope of the project, and the 
 - This section is managed by the team member responsible for implementation.
 - Include snippets or pseudocode where relevant.
 
-## Bonus Features (Optional)
+## Bonus Features
 - Discuss any additional features that were implemented to enhance the system.
 - Explain the innovative aspects and the effort involved.
 
-## GitHub Repository
-- Provide a link to the GitHub repository.
-- Ensure the repository contains the DDL and DML files within a directory titled “SQL”.
-- The README should provide an overview of the project and instructions for setup and usage.
-
-## Conclusion
-- Summarize the key points of the project and the report.
-- Reflect on the learning outcomes and potential improvements for the system.
 
