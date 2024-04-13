@@ -12,10 +12,10 @@ INSERT INTO Equipment (EquipmentName, Status) VALUES
 ('Dumbbell Set', 'In Use'),
 ('Rowing Machine', 'Maintenance'),
 ('Exercise Bike', 'Available'),
-('Yoga Mats', 'Available');
-('Barbell', 'Available');
-('Lat Pulldown Machine', 'Available');
-('Calf Raise Machine', 'Available');
+('Yoga Mats', 'Available'),
+('Barbell', 'Available'),
+('Lat Pulldown Machine', 'Available'),
+('Calf Raise Machine', 'Available'),
 ('Squat Rack', 'Available');
 
 -- Insert data into Member
