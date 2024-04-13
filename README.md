@@ -1,7 +1,19 @@
 *READ THIS TO UNDERSTAND HOW TO USE THE PROGRAM*
 
+INSTRUCTIONS TO RUN THE PROGRAM
+(1) Download the code and the necessary sql files to test
+(2) Install psycopg2 and tabulate
+    pip3 install psycopg2-binary
+    pip3 install tabulate
+(3) *ENSURE MODULES ARE INSTALLED IN THE SAME VERSION AS THE PYTHON PROGRAM YOU ARE USING* (If python3, use pip3)
+(4) Update the database information to match with your database
+(5) Run the program using: 
+    (FOR MAC/Linux) --> python3 main.py
+    (FOR Windows) --> python main.py
+(6) You can use the example information given in this ReadMe to login or make any changes
+
 FLOW OF THE PROGRAM
-The application is a Command Line Interface made in python. You can run the program by running ./main.py in the terminal.
+The application is a Command Line Interface made in python.
 
 LOGIN/REGISTER INTERFACE
 
@@ -70,9 +82,3 @@ Administrators can:
     (7) Handle billing: Update payment status for members.
 
 -----------------------------------------------------------------------------------------------------------------
-
-## Bonus Features
-- Discuss any additional features that were implemented to enhance the system.
-- Explain the innovative aspects and the effort involved.
-
-
