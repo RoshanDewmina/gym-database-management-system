@@ -34,7 +34,6 @@ CREATE TABLE Administrative_Staff (
     ContactInformation TEXT
 );
 
-
 -- Table creation for 'Room'
 CREATE TABLE Room (
     RoomID SERIAL PRIMARY KEY,
@@ -64,14 +63,12 @@ CREATE TABLE Registers (
     FOREIGN KEY (ClassID) REFERENCES Fitness_Class(ClassID)
 );
 
-
 -- Table creation for 'Equipment'
 CREATE TABLE Equipment (
     EquipmentID SERIAL PRIMARY KEY,
     EquipmentName VARCHAR(255) NOT NULL,
     Status VARCHAR(50) CHECK (Status IN ('Available', 'In Use', 'Maintenance'))
 );
-
 
 -- Intermediary table for 'Fi_Me' (Fitness Class to Member)
 CREATE TABLE Fi_Me (
