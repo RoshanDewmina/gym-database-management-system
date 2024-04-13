@@ -41,7 +41,7 @@ Upon starting the program, the user is prompted to either login or register as a
         - Email: `saad@email.com`
         - Password: `passwordsaad`
         - Fitness goals: `gain muscle`
-        - Health metrics: `Excellent`
+        - Health metrics: `25`
 
 ### MEMBER INTERFACE
 After successful login or registration, members are presented with a dashboard where they can:
