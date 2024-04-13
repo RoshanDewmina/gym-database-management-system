@@ -111,7 +111,7 @@ def manageSchedules(name, memberID):
     ]
     print("\nWhat would you like to do?")
     print("\n".join(menu))
-    choice = input("Enter your choice: ")
+    choice = input("\nEnter your choice: ")
     connection = connect()
     cursor = connection.cursor()
     if choice == "1":
@@ -178,7 +178,7 @@ def updateProfile(name, memberID):
     ]
     print("\nUpdate profile information:")
     print("\n".join(menu))
-    choice = input("Enter your choice: ")
+    choice = input("\nEnter your choice: ")
     connection = connect()
     cursor = connection.cursor()
     if choice == "1":
@@ -341,7 +341,7 @@ def displayAdminDashboard(name, staffID):
         displayAdminDashboard(name, staffID)
 
 def viewAllClasses(name, staffID):
-    print("\nWhich class would you like to view?")
+    print("\nWhich class would you like to view?\n")
     menu = [
         "1. Group Fitness Classes",
         "2. Personal Training Sessions"
