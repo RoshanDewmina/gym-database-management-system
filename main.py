@@ -448,15 +448,17 @@ def manageRoomBookings(name, staffID):
         classID = input("Enter ID of fitness class to be updated: ")
         roomID = input("Enter new room ID: ")
         cursor.execute("SELECT * FROM Fitness_Class WHERE ClassID = %s;", (classID,))
-        status = cursor.fetchall()
-        if(status):
+        status1 = cursor.fetchall()
+        cursor.execute("SELECT * FROM Room WHERE RoomID = %s;", (roomID,))
+        status2 = cursor.fetchall()
+        if(status1 and status2):
             cursor.execute("UPDATE Fitness_Class SET RoomID = %s WHERE ClassID = %s;", (roomID, classID))
             connection.commit()
             print("Room updated successfully.\n")
         else:
             cursor.close()
             connection.close()
-            print("Class ID not found.\n")
+            print("Class ID/Room ID not found.\n")
     elif choice == "3":
         classID = input("Enter ID of fitness class to be deleted: ")
         cursor.execute("SELECT * FROM Fitness_Class WHERE ClassID = %s;", (classID,))
@@ -479,11 +481,11 @@ def manageEquipment(name, staffID):
     connection = connect()
     cursor = connection.cursor()
     equipmentID = input("Enter ID of equipment to be updated: ")
-    status = input("Enter updated status: ")
+    statusEquip = input("Enter updated status: ")
     cursor.execute("SELECT * FROM Equipment WHERE EquipmentID = %s;", (equipmentID,))
     status = cursor.fetchone()
     if(status):
-        cursor.execute("UPDATE Equipment SET Status = %s WHERE EquipmentID = %s;", (status, equipmentID))
+        cursor.execute("UPDATE Equipment SET Status = %s WHERE EquipmentID = %s;", (statusEquip, equipmentID))
         connection.commit()
         print("Equipment status updated successfully.")
         cursor.close()
@@ -527,9 +529,16 @@ def manageClassSchedules(name, staffID):
         schedule = input("Enter schedule of class: ")
         roomID = input("Enter room ID for class: ")
         trainerID = input("Enter trainer ID for class: ")
-        cursor.execute("INSERT INTO Fitness_Class (ClassName, Schedule, RoomID, TrainerID) VALUES (%s, %s, %s, %s);", (className, schedule, roomID, trainerID))
-        connection.commit()
-        print("Class added successfully.")
+        cursor.execute("SELECT * FROM Room WHERE RoomID = %s;", (roomID,))
+        status = cursor.fetchall()
+        if(status):
+            cursor.execute("INSERT INTO Fitness_Class (ClassName, Schedule, RoomID, TrainerID) VALUES (%s, %s, %s, %s);", (className, schedule, roomID, trainerID))
+            connection.commit()
+            print("Class added successfully.\n")
+        else:
+            cursor.close()
+            connection.close()
+            print("Room ID does not exist.\n")
     elif choice == "2":
         classID = input("Enter ID of class to be updated: ")
         newSchedule = input("Enter updated class schedule: ")
