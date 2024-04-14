@@ -2,6 +2,10 @@
 
 ## IMPORTANT
 
+## YouTube Video 
+
+- [View YouTube Video](https://youtu.be/C4qZj0oT5Jk)
+
 ### INSTRUCTIONS TO RUN THE PROGRAM
 1. Download the code and the necessary SQL files to test.
 2. Install `psycopg2` and `tabulate`:
