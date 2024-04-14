@@ -37,7 +37,7 @@ void random_time(char *time) {
 int main() {
     srand(time(NULL));  
 
-    FILE *fp = fopen("dml_script.sql", "w");
+    FILE *fp = fopen("largeDataSetDML.sql", "w");
     if (fp == NULL) {
         printf("Failed to open file\n");
         return -1;

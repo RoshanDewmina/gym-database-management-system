@@ -20,12 +20,12 @@
 The application is a Command Line Interface made in Python.
 
 ## DATABASE SETUP
-To setup the database, run the `dataDDL.sql` file from the SQL folder in postgreSQL
-After tables are created, run the `dataDML.sql` file from the SQL folder in postgreSQL
+To setup the database, run the `dataDDL.sql` file from the `SQL` folder in postgreSQL
+After tables are created, run the `dataDML.sql` file from the `SQL` folder in postgreSQL
 
 **IMPORTANT** 
     The `dataDML.sql` is the file that should be used to run and test the program
-    If you would like to test the efficiency of the database, compile and run the `generateRandomData.c` function
+    If you would like to test the efficiency of the database, compile and run the `generateRandomData.c` function located in the `SQL` folder
 
 1. To compile: 
     ```bash
@@ -35,6 +35,15 @@ After tables are created, run the `dataDML.sql` file from the SQL folder in post
     ```bash
     ./generateData
     ```
+
+    When this file is ran, it will generate a .sql file named `largeDataSetDML.sql`
+    If you run this in postgreSQL it will insert a very large amount of data into the database
+
+    **Note** Since the `largeDataSetDML.sql` file was generated using random values, the data entries are not "user friendly"
+
+    Only use this file if you want to test the efficiency of the database in terms of data retrieval 
+
+    For normal testing and running *ONLY* use `dataDML.sql`
 
 #### LOGIN/REGISTER INTERFACE
 Upon starting the program, the user is prompted to either login or register as a member, trainer, or administrator.
