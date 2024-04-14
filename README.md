@@ -43,6 +43,8 @@ Upon starting the program, the user is prompted to either login or register as a
         - Fitness goals: `gain muscle`
         - Health metrics: `25`
 
+**Note** When selecting to update/delete elements using ID's, ensure those ID's exist (error handelling is implemented however)
+
 ### MEMBER INTERFACE
 After successful login or registration, members are presented with a dashboard where they can:
 1. Update profile information.
