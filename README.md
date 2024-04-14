@@ -23,7 +23,7 @@ The application is a Command Line Interface made in Python.
 To setup the database, run the `dataDDL.sql` file from the `SQL` folder in postgreSQL
 After tables are created, run the `dataDML.sql` file from the `SQL` folder in postgreSQL
 
-**IMPORTANT** 
+**IMPORTANT**:
     The `dataDML.sql` is the file that should be used to run and test the program
     If you would like to test the efficiency of the database, compile and run the `generateRandomData.c` function located in the `SQL` folder
 
