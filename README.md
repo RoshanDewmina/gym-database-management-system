@@ -27,11 +27,11 @@ After tables are created, run the `dataDML.sql` file from the SQL folder in post
     The `dataDML.sql` is the file that should be used to run and test the program
     If you would like to test the efficiency of the database, compile and run the `generateRandomData.c` function
 
-    To compile: 
+1. To compile: 
     `bash
     gcc -o generateData generateRandomData.c
     `
-    To run:     
+2. To run:     
     `bash
     ./generateData
     `
