@@ -4,7 +4,7 @@
 
 ### INSTRUCTIONS TO RUN THE PROGRAM
 1. Download the code and the necessary SQL files to test.
-2. Install `psycopg2` and `tabulate`:
+2. Install `psycopg2` and `tabulate`:f
     ```bash
     pip3 install psycopg2-binary
     pip3 install tabulate
