@@ -1,10 +1,11 @@
 # README - Program Usage Instructions
 
-## IMPORTANT
-
 ## YouTube Video 
 
 - [View YouTube Video](https://youtu.be/C4qZj0oT5Jk)
+
+## IMPORTANT
+
 
 ### INSTRUCTIONS TO RUN THE PROGRAM
 1. Download the code and the necessary SQL files to test.
