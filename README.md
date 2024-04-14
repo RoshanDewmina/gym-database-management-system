@@ -24,7 +24,9 @@ To setup the database, run the `dataDDL.sql` file from the `SQL` folder in postg
 After tables are created, run the `dataDML.sql` file from the `SQL` folder in postgreSQL
 
 **IMPORTANT**:
-    The `dataDML.sql` is the file that should be used to run and test the program
+
+    The `dataDML.sql` is the data file that you should use normally to run and test the program
+    
     If you would like to test the efficiency of the database, compile and run the `generateRandomData.c` function located in the `SQL` folder
 
 1. To compile: 
