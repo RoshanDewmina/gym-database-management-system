@@ -12,12 +12,24 @@
 3. **ENSURE MODULES ARE INSTALLED IN THE SAME VERSION AS THE PYTHON PROGRAM YOU ARE USING** (If using Python 3, use `pip3`).
 4. Update the database information to match with your database settings.
 5. Run the program using:
-    - **FOR MAC/Linux**: `python3 main.py`
-    - **FOR Windows**: `python main.py`
+    - **FOR MAC/Linux**: `bash python3 main.py`
+    - **FOR Windows**: `bash python main.py`
 6. You can use the example information given in this README to log in or make any changes.
 
 ### FLOW OF THE PROGRAM
 The application is a Command Line Interface made in Python.
+
+## DATABASE SETUP
+To setup the database, run the `dataDDL.sql` file from the SQL folder in postgreSQL
+After tables are created, run the `dataDML.sql` file from the SQL folder in postgreSQL
+
+**IMPORTANT** 
+    The `dataDML.sql` is the file that should be used to run and test the program
+    If you would like to test the efficiency of the database, compile and run the `generateRandomData.c` function
+
+        To compile: `bash gcc -o generateData generateRandomData.c`
+        To run:     `bash ./generateData`
+
 
 #### LOGIN/REGISTER INTERFACE
 Upon starting the program, the user is prompted to either login or register as a member, trainer, or administrator.
