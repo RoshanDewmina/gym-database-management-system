@@ -4,7 +4,7 @@
 
 ### INSTRUCTIONS TO RUN THE PROGRAM
 1. Download the code and the necessary SQL files to test.
-2. Install `psycopg2` and `tabulate`:
+2. Install `psycopg2` and `tabulate`:f
     ```bash
     pip3 install psycopg2-binary
     pip3 install tabulate
@@ -54,6 +54,8 @@ Upon starting the program, the user is prompted to either login or register as a
         - Password: `passwordsaad`
         - Fitness goals: `gain muscle`
         - Health metrics: `25`
+
+**Note** When selecting to update/delete elements using ID's, ensure those ID's exist (error handelling is implemented however)
 
 ### MEMBER INTERFACE
 After successful login or registration, members are presented with a dashboard where they can:
