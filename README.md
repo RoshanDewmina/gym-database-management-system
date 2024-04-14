@@ -41,13 +41,15 @@ If you would like to test the efficiency of the database, compile and run the `g
     When this file is ran, it will generate a .sql file named `largeDataSetDML.sql`
     If you run this in postgreSQL it will insert a very large amount of data into the database
 
-    **Note** Since the `largeDataSetDML.sql` file was generated using random values, the data entries are not "user friendly"
+    **Note** 
+    
+    Since the `largeDataSetDML.sql` file was generated using random values, the data entries are not "user friendly"
 
     Only use this file if you want to test the efficiency of the database in terms of data retrieval 
 
     For normal testing and running *ONLY* use `dataDML.sql`
 
-#### LOGIN/REGISTER INTERFACE
+### LOGIN/REGISTER INTERFACE
 Upon starting the program, the user is prompted to either login or register as a member, trainer, or administrator.
 
 **If logging in:**
